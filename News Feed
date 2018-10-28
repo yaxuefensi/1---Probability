@@ -1,0 +1,26 @@
+想讨论一下这个问题
+
+Lets go back in time to beforeNews Feed had ads. Suppose that we want to make 5% of impressions in News Feedads. 
+Here are two ways we could do this
+1.    Rank stories as usual, but for every position inNews Feed, we independently replace the story with an ad, 
+with probability 5%
+2.    Rank stories as usual, and for every 20 storieswe replace exactly one of them (at random with an ad)
+Suppose a given user views 100items (stories + ads) in News Feed. Is the expected number of ads viewedgreater, less,
+or equal under process (1) or process (2)? How about thevariance?
+
+
+请问这个process 2 的variance怎么算啊，是poisson吗？？？. 一
+
+第二个process的expected value就是100×1/20 = 5， 没有variance，因为是保证一定每20个里有一个广告，100个里面就一定有5个，不多不少。
+
+咱笨想啊：
+来源一亩.三分地论坛. 
+假如你写个程序然后模拟一万遍第二个process。然后你把这10000个process的total ads count的distribution 画出来。 你觉着这个distribution张啥样？. From 1point 3acres bbs
+. Waral 博客有更多文章,
+来源一亩.三分地论坛. 
+补充内容 (2018-9-7 22:52):
+楼上正解。发的时候没看见 看见我就不用发了
+
+LS两位有道理啊。。。。我也觉得没有可是不知道怎么回答。。。。第一个就是np(1-p)吧
+
+对，是的，就是binomial distribution 求variance
